@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>RPG Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container" id="containerRpg">
+        <audio src="rain.wav" loop id="backgroundAudio"></audio>
+        <audio src="thunder.wav" id="thunder"></audio>
+        <div class="mystic">
+          <img src="ilustracao.png" alt="Mystic Image" id="mysticImage">
+        </div>
+        <div class="dialog-box">
+          <h1 id="dialog">Olá, criança. Qual é o seu nome?</h1>
+          <p id="option1" onclick="chooseOption(1)" class="hidden">1 - Sim. Por que não.</p>
+          <p id="option2" onclick="chooseOption(2)" class="hidden">2 - Saia daqui, sua velha maluca!</p>
+        </div>
+        <input type="text" id="nome-usuario" placeholder="Digite o seu nome e pressione [Enter]" onkeydown="checkEnter(event)" maxlength="8">
+        <input type="button" value="enviar" class="hidden" onclick="submitName()">
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>

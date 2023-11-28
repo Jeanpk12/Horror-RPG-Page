@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(rain.gif);
+}
+
+
+.mystic img {
+    width: 550px; 
+    max-width: 700px; 
+    min-height: 650px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 53% 47% 57% 43% / 100% 100% 0% 0% ;
+}
+
+.dialog-box {
+    border: 4px dashed white;
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    background-color: black;
+}
+
+#nome-usuario{
+    width: 80%;
+    padding: 20px;
+    margin-top: 8px;
+    background-color: black;
+    border: 4px dashed white;
+    color: white;
+    font-size: 24px;
+    font-family: 'Pixelify Sans', sans-serif;
+    outline: none;
+}
+
+#nome-usuario::placeholder{
+    color: white;
+    font-size: 24px;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.dialog-box h1{
+    color: white;
+    font-size: 32px;
+}
+
+.dialog-box p {
+    cursor: pointer;
+    margin: 10px 0;
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.dialog-box p:hover {
+    color: grey;
+}
+
+.hidden{
+    display: none;
+}
+
+.liquid-transition {
+    opacity: 0;
+  filter: blur(10px); /* Você pode ajustar o valor do desfoque conforme necessário */
+  transition: opacity 1s, filter 1s;
+  }
+
+  .thunder {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    animation: lightning 0.3s linear;
+  }
+
+  @keyframes lightning {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
